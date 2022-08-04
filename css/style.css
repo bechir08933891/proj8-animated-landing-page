@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(#200016, #10001f);
+    font-family: system-ui, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    /* to make header fo9 ,es el kol */
+    position: fixed;
+    width: 95%;
+    z-index: 1000;
+}
+header .logo{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li{
+    margin-left: 2rem;
+}
+header ul li a{
+    padding: 0.5rem 1rem; /*hethi bech ki na3ml hover nal9a elcarreau mrigel*/
+    border-radius: 20px;
+}
+header ul li a:hover, .activ{
+    background: #fff;
+    color: #333;
+}
+
+/* main section */
+.main{
+    position: relative; /*to make children absolute*/
+    width: 100%;
+    height: 100vh;
+    /* hethi bech nrodo el h2 eli mawjoda m3a tsawer fi wast screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* bech nzid partie ba3 section main bech ykon transition lel les colors */
+.main::after{
+    content: '';
+    position: absolute; /*bech najm net7km feha*/
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top,#200016, transparent);
+}
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;/*bech tsal7 el aghlat t3 taswira ma jetch ged ged*/
+}
+#moon{
+    /* bech nrodo el background t3 el moon kima el bg t3 el page */
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+.nordev{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.85rem;
+    /* bech ntal3oha chwy mel wast */
+    transform: translateY(-10rem);
+}
+
+/* content section */
+.content{
+    color: #fff;
+    padding: 2rem;
+}
+.content h2{
+    margin: 20px;
+    font-size: 2rem;
+}
+.content p{
+    margin: 20px;
+}
